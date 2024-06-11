@@ -44,6 +44,7 @@ function runDocker(containerName, filePath, volumeBind, res, startTime ) {
     })
     });
     setTimeout(() => {
+      console.log(stdout.toString());
     res.send(stdout.toString());
     }, 100);
   }).on('container', (c) => {
